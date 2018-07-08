@@ -6,10 +6,9 @@ import java.net.Socket;
 
 public class HttpServer {
     private static final int SERVER_PORT = 9090;
+    private static final String SHUTDOWN_COMMAND = "/QUIT";
     public static final String WEB_ROOT = System.getProperty("user.dir")
             + File.separator + "webroot";
-    private static final String SHUTDOWN_COMMAND = "/QUIT";
-
     public static void main(String[] args) {
         HttpServer server = new HttpServer();
         server.await();
